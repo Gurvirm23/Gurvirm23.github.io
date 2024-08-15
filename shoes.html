@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EZSnkrs Website</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Product Section */
+        .products__container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .products__box {
+            flex: 1 1 30%;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            text-align: center;
+            text-decoration: none; /* Remove underline from links */
+            color: inherit; /* Inherit color from parent */
+        }
+
+        .products__box:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+            transform: scale(1.02); /* Slightly scale up on hover */
+        }
+
+        .products__img-container {
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .products__img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .products__title {
+            font-size: 1.1em;
+            margin: 10px 0 5px;
+            color: #333;
+        }
+
+        .products__price {
+            font-size: 1em;
+            color: #777;
+        }
+        .navbar__cart {
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+            color: #000;
+        }
+
+        .navbar__cart i {
+            font-size: 1.5em;
+            transition: color 0.3s;
+        }
+
+        .navbar__cart:hover i {
+            color: #444;
+        }
+
+        @media (min-width: 768px) {
+            .navbar__cart {
+                display: flex;
+            }
+        }
+
+        .navbar__menu .navbar__item {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar__item .navbar__links {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar__menu .navbar__item:last-child {
+            margin-left: 20px; 
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo">EZSnkrs</a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <a href="/cart.html" class="navbar__cart" aria-label="Cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="/" class="navbar__links">Home</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/shoes.html" class="navbar__links">Shoes</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/clothing.html" class="navbar__links">Clothing</a>
+                </li>
+                <li class="navbar__btn">
+                    <a href="/" class="button">Sign Up</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <div class="main">
+        <div class="main__container">
+            <div class="main__content">
+                <h1>JORDANS</h1>
+                <h2>YEEZYS</h2>
+                <p>We have it all.</p>
+                <button class="main__btn"><a href="/">Get Started</a></button>
+            </div>
+            <div class="main__img--container">
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Section -->
+    <div class="products">
+        <div class="products__container">
+            <a href="product1.html" class="products__box">
+                <div class="products__img-container">
+                    <img src="/images/owr.avif" alt="Jordan 1 High x Off White 'Chicago'" class="products__img">
+                </div>
+                <h3 class="products__title">Jordan 1 High x Off White "Chicago"</h3>
+                <p class="products__price">CA$2270</p>
+            </a>
+            <a href="product2.html" class="products__box">
+                <div class="products__img-container">
+                    <img src="/images/unla.avif" alt="Jordan 1 High x UNLA 'Black Toe'" class="products__img">
+                </div>
+                <h3 class="products__title">Jordan 1 High x UNLA "Black Toe"</h3>
+                <p class="products__price">CA$700</p>
+            </a>
+            <a href="product3.html" class="products__box">
+                <div class="products__img-container">
+                    <img src="/images/travis.avif" alt="Jordan 1 High x Travis Scott 'Mocha'" class="products__img">
+                </div>
+                <h3 class="products__title">Jordan 1 High x Travis Scott "Mocha"</h3>
+                <p class="products__price">CA$1770</p>
+            </a>
+        </div>
+    </div>    
+
+<!-- Footer Section -->
+<div class="footer__container">
+    <a href="/" class="footer__logo">
+        <i class="fas fa-gem"></i> EZSnkrs
+    </a>
+    <nav class="footer__links">
+        <div class="footer__link--wrapper">
+            <div class="footer__link--items">
+                <h2>About Us</h2>
+                <a href="contact.html" class="footer__link">I Contact Us I</a>
+                <a href="legit-check.html" class="footer__link"> Legit Check I</a>
+            </div>
+            <div class="footer__link--items">
+                <h2>Shop All</h2>
+                <a href="shoes.html" class="footer__link">I Shoes I</a>
+                <a href="clothing.html" class="footer__link"> Clothing I</a>
+            </div>
+        </div>
+        <div class="footer__link--wrapper">
+            <div class="footer__link--items">
+                <h2>Sizing</h2>
+                <a href="size-charts.html" class="footer__link">I Size Chart I</a>
+            </div>
+            <div class="footer__link--items">
+                <h2>Shipping/Return Policy</h2>
+                <a href="https://www.17track.net/en" class="footer__link">I Shipping Tracker I</a>
+                <a href="refunds.html" class="footer__link"> Refunds I</a>
+            </div>
+        </div>
+    </nav>
+    <div class="social__media">
+        <div class="socials__icons">
+            <a href="https://instagram.com" class="socials__icons--link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://twitter.com" class="socials__icons--link" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="https://facebook.com" class="socials__icons--link" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://youtube.com" class="socials__icons--link" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+        </div>
+    </div>
+    <p class="website__rights">© EZSnkrs 2024. All Rights Reserved</p>
+</div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EZSnkrs Website</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Cart Button Styles */
+        .navbar__cart {
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+            color: #000;
+        }
+
+        .navbar__cart i {
+            font-size: 1.5em;
+            transition: color 0.3s;
+        }
+
+        .navbar__cart:hover i {
+            color: #444;
+        }
+
+        @media (min-width: 768px) {
+            .navbar__cart {
+                display: flex;
+            }
+        }
+
+        .navbar__menu .navbar__item {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar__item .navbar__links {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar__menu .navbar__item:last-child {
+            margin-left: 20px; 
+        }
+
+        /* Refund Policy Styles */
+        .policy-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 1.75em;
+            margin-top: 20px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+        }
+
+        p {
+            margin: 15px 0;
+        }
+
+        ul {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        .policy-section {
+            margin-bottom: 30px;
+        }
+
+        .contact-info {
+            margin-top: 30px;
+        }
+
+        .contact-info a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer Styles */
+
+        .footer__links h2 {
+            font-size: 1.25em;
+            margin-top: 0;
+            border-bottom: none;
+        }
+        
+        .footer__link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo">EZSnkrs</a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <a href="/cart.html" class="navbar__cart" aria-label="Cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="/" class="navbar__links">Home</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/shoes.html" class="navbar__links">Shoes</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/clothing.html" class="navbar__links">Clothing</a>
+                </li>
+                <li class="navbar__btn">
+                    <a href="/" class="button">Sign Up</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Refund Policy Section -->
+    <div class="policy-container">
+        <h1>Refund Policy</h1>
+        <div class="policy-section">
+            <h2>Overview</h2>
+            <p>We strive to ensure you are satisfied with your purchase. If you are not completely satisfied, our refund policy provides detailed instructions on how to request a refund.</p>
+        </div>
+        <div class="policy-section">
+            <h2>Refund Eligibility</h2>
+            <p>Items must be returned in their original condition within 30 days of purchase. The following items are non-refundable:</p>
+            <ul>
+                <li>Gift cards</li>
+                <li>Personalized or custom items</li>
+                <li>Items marked as non-returnable</li>
+            </ul>
+        </div>
+        <div class="policy-section">
+            <h2>Requesting a Refund</h2>
+            <p>To initiate a refund, contact our support team with your order number and reason for return:</p>
+            <ul>
+                <li>Email: <a href="mailto:support@ezsnkrs.com">support@ezsnkrs.com</a></li>
+                <li>Phone: 1-800-123-4567</li>
+            </ul>
+            <p>After receiving and inspecting the returned item, we will process your refund within 5-7 business days.</p>
+        </div>
+        <div class="policy-section">
+            <h2>Late or Missing Refunds</h2>
+            <p>If you haven’t received a refund yet, first check your bank account again. Then contact your credit card company, as it may take some time before your refund is officially posted.</p>
+        </div>
+        <div class="policy-section">
+            <h2>Exchanges</h2>
+            <p>We only replace items if they are defective or damaged. If you need to exchange it for the same item, contact our support team.</p>
+        </div>
+        <div class="policy-section">
+            <h2>Shipping Costs</h2>
+            <p>Shipping costs are non-refundable. If you receive a refund, the cost of return shipping will be deducted from your refund.</p>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer__container">
+        <a href="/" class="footer__logo">
+            <i class="fas fa-gem"></i> EZSnkrs
+        </a>
+        <nav class="footer__links">
+            <div class="footer__link--wrapper">
+                <div class="footer__link--items">
+                    <h2>About Us</h2>
+                    <a href="contact.html" class="footer__link">I Contact Us I</a>
+                    <a href="legit-check.html" class="footer__link"> Legit Check I</a>
+                </div>
+                <div class="footer__link--items">
+                    <h2>Shop All</h2>
+                    <a href="shoes.html" class="footer__link">I Shoes I</a>
+                    <a href="clothing.html" class="footer__link"> Clothing I</a>
+                </div>
+            </div>
+            <div class="footer__link--wrapper">
+                <div class="footer__link--items">
+                    <h2>Sizing</h2>
+                    <a href="size-charts.html" class="footer__link">I Size Chart I</a>
+                </div>
+                <div class="footer__link--items">
+                    <h2>Shipping/Return Policy</h2>
+                    <a href="https://www.17track.net/en" class="footer__link">I Shipping Tracker I</a>
+                    <a href="refunds.html" class="footer__link"> Refunds I</a>
+                </div>
+            </div>
+        </nav>
+        <div class="social__media">
+            <div class="socials__icons">
+                <a href="https://instagram.com" class="socials__icons--link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://twitter.com" class="socials__icons--link" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="https://facebook.com" class="socials__icons--link" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://youtube.com" class="socials__icons--link" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+        <p class="website__rights">© EZSnkrs 2024. All Rights Reserved</p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
