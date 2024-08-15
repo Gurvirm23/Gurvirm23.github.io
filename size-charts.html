@@ -42,6 +42,42 @@
         .footer__link--items a[href="size-charts.html"] {
             color: #fff; 
         }
+
+        .navbar__cart {
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+            color: #000;
+        }
+
+        .navbar__cart i {
+            font-size: 1.5em;
+            transition: color 0.3s;
+        }
+
+        .navbar__cart:hover i {
+            color: #444;
+        }
+
+        @media (min-width: 768px) {
+            .navbar__cart {
+                display: flex;
+            }
+        }
+
+        .navbar__menu .navbar__item {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar__item .navbar__links {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar__menu .navbar__item:last-child {
+            margin-left: 20px; 
+        }
     </style>
 </head>
 <body>
