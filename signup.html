@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EZSnkrs Website</title>
-    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* Cart Button Styles */
@@ -43,6 +43,29 @@
         .navbar__menu .navbar__item:last-child {
             margin-left: 20px; 
         }
+
+        .thank-you-container {
+            display: none;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .thank-you-container h3 {
+            margin-bottom: 10px;
+        }
+
+        .thank-you-container button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .thank-you-container button:hover {
+            background-color: #555;
+        }
     </style>
 </head>
 <body>
@@ -74,39 +97,30 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <div class="main">
-        <div class="main__container"> 
-            <div class="main__content"> 
-                <h1>NEXT GENERATIONS</h1>
-                <h2>STREETWEAR</h2>
-                <p>The future of our fashion.</p>
-                <button class="main__btn"><a href="/">Get Started</a></button> 
-            </div>
-            <div class="main__img--container"> 
-            </div>
+    <div class="signup-container">
+        <h2>Sign Up for EZSnkrs Digital Newspaper</h2>
+        <form class="signup-form" onsubmit="showThankYouMessage(event)">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" required placeholder="Enter your first name">
+
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" required placeholder="Enter your last name">
+
+            <button type="submit">Sign Up</button>
+        </form>
+
+        <!-- Thank You Message -->
+        <div id="thank-you-message" class="thank-you-container">
+            <h3>Thank you for signing up!</h3>
+            <p>You have successfully subscribed to our newsletter.</p>
+            <button onclick="goBack()">Go Back</button>
         </div>
     </div>
 
-    <!-- Services Section-->
-    <div class="services">
-        <h1>See what the hype is about</h1>
-        <div class="services__container">
-            <div class="services__card">
-                <h2>Experience bliss</h2>
-                <p>Hand crafted with the finest materials</p>
-                <button onclick="window.location.href='shoes.html';">Explore Shoes</button>
-            </div>
-            <div class="services__card">
-                <h2>Are you Ready?</h2>
-                <p>Take the leap and get your missing piece.</p>
-                <button onclick="window.location.href='clothing.html';">Explore Clothes</button>
-            </div>
-        </div>
-    </div>
-    
-
-<!-- Footer Section -->
+    <!-- Footer Section -->
     <div class="footer__container">
         <a href="/" class="footer__logo">
             <i class="fas fa-gem"></i> EZSnkrs
@@ -136,25 +150,35 @@
                 </div>
             </div>
         </nav>
-    <div class="social__media">
-        <div class="socials__icons">
-            <a href="https://instagram.com" class="socials__icons--link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="https://twitter.com" class="socials__icons--link" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                <i class="fa-brands fa-twitter"></i>
-            </a>
-            <a href="https://facebook.com" class="socials__icons--link" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                <i class="fa-brands fa-facebook"></i>
-            </a>
-            <a href="https://youtube.com" class="socials__icons--link" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-                <i class="fa-brands fa-youtube"></i>
-            </a>
+        <div class="social__media">
+            <div class="socials__icons">
+                <a href="https://instagram.com" class="socials__icons--link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://twitter.com" class="socials__icons--link" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="https://facebook.com" class="socials__icons--link" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://youtube.com" class="socials__icons--link" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+            </div>
         </div>
+        <p class="website__rights">© EZSnkrs 2024. All Rights Reserved</p>
     </div>
-    <p class="website__rights">© EZSnkrs 2024. All Rights Reserved</p>
-</div>
 
-    <script src="app.js"></script>
+    <script>
+        function showThankYouMessage(event) {
+            event.preventDefault();
+            document.querySelector('.signup-form').style.display = 'none';
+            document.getElementById('thank-you-message').style.display = 'block';
+        }
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
 </body>
 </html>

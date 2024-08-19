@@ -13,73 +13,79 @@
             margin: 50px auto;
             padding: 20px;
         }
-
+    
         .size-charts h1 {
             font-size: 2em;
             margin-bottom: 20px;
         }
-
+    
         .size-charts img {
             width: 100%;
             height: auto;
             margin-bottom: 20px;
             border-radius: 8px;
         }
-
-        .back-link {
+    
+        .size-charts button {
             display: inline-block;
             margin-top: 20px;
-            font-size: 1em;
-            color: #000;
+            font-size: 1.2em; /* Increased font size */
+            color: #fff;
             text-decoration: none;
-            padding: 10px;
-            border: 1px solid #ddd;
+            padding: 15px 25px; /* Increased padding */
+            border: none;
             border-radius: 8px;
-            background-color: #f9f9f9;
+            background-color: #333;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
         }
-
-        
+    
+        .size-charts button:hover {
+            background-color: #555; /* Darker color on hover */
+        }
+    
         .footer__link--items a[href="size-charts.html"] {
             color: #fff; 
         }
-
-               /* Cart Button Styles */
-               .navbar__cart {
+    
+        /* Cart Button Styles */
+        .navbar__cart {
             display: flex;
             align-items: center;
             margin-left: 20px;
             color: #000;
         }
-
+    
         .navbar__cart i {
             font-size: 1.5em;
             transition: color 0.3s;
         }
-
+    
         .navbar__cart:hover i {
             color: #444;
         }
-
+    
         @media (min-width: 768px) {
             .navbar__cart {
                 display: flex;
             }
         }
-
+    
         .navbar__menu .navbar__item {
             display: flex;
             align-items: center;
         }
-
+    
         .navbar__item .navbar__links {
             display: flex;
             align-items: center;
         }
-
+    
         .navbar__menu .navbar__item:last-child {
             margin-left: 20px; 
         }
     </style>
+    
 </head>
 <body>
     <nav class="navbar">
@@ -104,7 +110,7 @@
                     <a href="/clothing.html" class="navbar__links">Clothing</a>
                 </li>
                 <li class="navbar__btn">
-                    <a href="/" class="button">Sign Up</a>
+                    <a href="/signup.html" class="button">Sign Up</a>
                 </li>
             </ul>
         </div>
@@ -115,39 +121,39 @@
         <img src="/images/sizechart.webp" alt="Size Chart 1">
         <img src="/images/size chart2.webp" alt="Size Chart 2">
         <img src="/images/sizechart3.webp" alt="Size Chart 3">
-        <a href="index.html" class="back-link">Back to Home</a>
+        <button onclick="goBack()">Go Back</button>
     </div>
 
-    <!-- Footer Section -->
-    <div class="footer__container">
-        <a href="/" class="footer__logo">
-            <i class="fas fa-gem"></i> EZSnkrs
-        </a>
-        <nav class="footer__links">
-            <div class="footer__link--wrapper">
-                <div class="footer__link--items">
-                    <h2>About Us</h2>
-                    <a href="contact.html" class="footer__link"> | Contact Us |</a>
-                    <a href="legit-check.html" class="footer__link"> Legit Check |</a>
-                </div>
-                <div class="footer__link--items">
-                    <h2>Shop All</h2>
-                    <a href="shoes.html" class="footer__link">| Shoes |</a>
-                    <a href="clothing.html" class="footer__link"> Clothing |</a>
-                </div>
+<!-- Footer Section -->
+<div class="footer__container">
+    <a href="/" class="footer__logo">
+        <i class="fas fa-gem"></i> EZSnkrs
+    </a>
+    <nav class="footer__links">
+        <div class="footer__link--wrapper">
+            <div class="footer__link--items">
+                <h2>About Us</h2>
+                <a href="contact.html" class="footer__link">I Contact Us I</a>
+                <a href="legit-check.html" class="footer__link"> Legit Check I</a>
             </div>
-            <div class="footer__link--wrapper">
-                <div class="footer__link--items">
-                    <h2>Sizing</h2>
-                    <a href="size-charts.html" class="footer__link">| Size Chart |</a>
-                </div>
-                <div class="footer__link--items">
-                    <h2>Shipping/Return Policy</h2>
-                    <a href="https://www.17track.net/en" class="footer__link">| Shipping Tracker |</a>
-                    <a href="refunds.html" class="footer__link">Refunds |</a>
-                </div>
+            <div class="footer__link--items">
+                <h2>Shop All</h2>
+                <a href="shoes.html" class="footer__link">I Shoes I</a>
+                <a href="clothing.html" class="footer__link"> Clothing I</a>
             </div>
-        </nav>
+        </div>
+        <div class="footer__link--wrapper">
+            <div class="footer__link--items">
+                <h2>Sizing</h2>
+                <a href="size-charts.html" class="footer__link">I Size Chart I</a>
+            </div>
+            <div class="footer__link--items">
+                <h2>Shipping/Return Policy</h2>
+                <a href="https://www.17track.net/en" class="footer__link">I Shipping Tracker I</a>
+                <a href="refunds.html" class="footer__link"> Refunds I</a>
+            </div>
+        </div>
+    </nav>
         <div class="social__media">
             <div class="socials__icons">
                 <a href="https://instagram.com" class="socials__icons--link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
@@ -168,5 +174,12 @@
     </div>
 
     <script src="app.js"></script>
+
+    <script>        
+    function goBack() {
+        window.history.back();
+    }
+    </script>
+
 </body>
 </html>
